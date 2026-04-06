@@ -47,6 +47,11 @@ Calm communicator, strong listener, able to go deep for long stretches. Core sta
                     link:"https://apps.apple.com/cn/search?term=fogBoard"
                 },
                 {
+                    subject:"Chrome extensions (torows)",
+                    desc:"Published Chrome extensions (Chrome Web Store, torows): Table to Excel, Batch Downloader, Cinema Mode, One-Click Video Downloader, E-ink Display, Adolescent Protection, Smart Hide, and more.",
+                    link:"https://chromewebstore.google.com/search/torows"
+                },
+                {
                     subject:"marstaff",
                     desc:"Go-based extensible AI agent platform: multi-provider LLMs, tools & SKILL.md skills, MCP, WebSocket streaming, Telegram/Matrix bots, and AFK background tasks (cron, monitoring, notifications).",
                     link:"https://github.com/xurenlu/marstaff"
@@ -224,6 +229,11 @@ Calm communicator, strong listener, able to go deep for long stretches. Core sta
                 subject:"fogBoard",
                 desc:"已上架白板应用：无限画布，适用于手绘、会议记录与教学演示。",
                 link:"https://apps.apple.com/cn/search?term=fogBoard"
+            },
+            {
+                subject:"Chrome 扩展（torows）",
+                desc:"已上架 Chrome 网上应用店扩展（torows）：表格转 Excel、批量下载、影院模式、一键视频下载、类墨水屏阅读、青少年防护、智能隐藏等，详见商店搜索页。",
+                link:"https://chromewebstore.google.com/search/torows"
             },
             {
                 subject:"marstaff",

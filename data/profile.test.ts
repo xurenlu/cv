@@ -25,4 +25,10 @@ describe('profile data', () => {
     expect(profile.en.projects.some((p) => p.subject.includes('动手学'))).toBe(true)
     expect(profile.en.projects.some((p) => p.subject.includes('妙墨'))).toBe(true)
   })
+
+  it('lists Chrome Web Store torows extensions with store search link', () => {
+    const chromeLink = 'https://chromewebstore.google.com/search/torows'
+    expect(profile.zh.projects.some((p) => p.link === chromeLink)).toBe(true)
+    expect(profile.en.projects.some((p) => p.link === chromeLink)).toBe(true)
+  })
 })
