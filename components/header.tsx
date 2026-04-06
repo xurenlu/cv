@@ -2,9 +2,9 @@ import Link from 'next/link'
 import ThemeChanger from './themechanger'
 import { useRouter } from 'next/router'
 import Image from 'next/image'
+import type { ReactElement } from 'react'
 import avatar from 'public/letter-r.png'
 import styles from './header.module.scss'
-import {Button} from "@chakra-ui/react";
 import {useTheme} from "next-themes";
 
 const links = [
@@ -13,7 +13,7 @@ const links = [
   { name: '简体中文', path: '/default/zh' ,target:""},
 ]
 
-const Header = (): JSX.Element => {
+const Header = (): ReactElement => {
   const { setTheme, theme } = useTheme()
   function gen(){
     setTheme("light")

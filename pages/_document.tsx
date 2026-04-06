@@ -1,6 +1,5 @@
 import { Html, Head, Main, NextScript } from 'next/document'
 
-import {ColorModeScript} from '@chakra-ui/react'
 export default function Document() {
     return (
         <Html lang={"zh-ch"}>
@@ -8,7 +7,6 @@ export default function Document() {
 
             </Head>
             <body>
-            <ColorModeScript initialColorMode={"light"} />
             <script src={"/html2canvas.min.js"} defer/>
             <Main />
             <NextScript/>

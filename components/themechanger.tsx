@@ -1,6 +1,6 @@
-import { useEffect, useState, Fragment } from 'react'
+import { useEffect, useState, Fragment, type ReactElement } from 'react'
 import { useTheme } from 'next-themes'
-import { motion, AnimateSharedLayout, AnimatePresence } from 'framer-motion'
+import { motion, LayoutGroup, AnimatePresence } from 'framer-motion'
 import styles from './themechanger.module.scss'
 
 
@@ -46,19 +46,21 @@ const getIcon = (variant: string) => {
     )
 }
 
-const ThemeChanger = (): JSX.Element => {
+const ThemeChanger = (): ReactElement => {
     const [mounted, setMounted] = useState(false)
     const [active, setActive] = useState(false)
     const [hovered, setHovered] = useState('')
     const { setTheme, theme } = useTheme()
 
     // When mounted on client, now we can show the UI
-    useEffect(() => setMounted(true), [])
+    useEffect(() => {
+        queueMicrotask(() => setMounted(true))
+    }, [])
 
     if (!mounted) return <div className={styles.wrapper} /> // skeleton on server
 
     return (
-        <AnimateSharedLayout>
+        <LayoutGroup>
             <div className={styles.wrapper}>
                 <motion.div layout className={styles.menu}>
                     <AnimatePresence initial={false}>
@@ -107,7 +109,7 @@ const ThemeChanger = (): JSX.Element => {
                     </AnimatePresence>
                 </motion.div>
             </div>
-        </AnimateSharedLayout>
+        </LayoutGroup>
     )
 }
 

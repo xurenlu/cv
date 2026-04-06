@@ -1,7 +1,8 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import {Box, Flex, Grid, GridItem, Spacer} from "@chakra-ui/react"
+import {Box, Flex, Grid, GridItem} from "@chakra-ui/react"
+import packageJson from '../package.json'
 import avatar from '../public/renlu.png'
 import {BiBody, BiBookOpen, BiPhone, BiBriefcase, BiCurrentLocation, BiMailSend, BiCode} from "react-icons/bi";
 import Link from "next/link";
@@ -70,12 +71,15 @@ export default function Page(props:any) {
         }
     }
     useEffect(()=>{
-        console.log(window.outerWidth)
-        if(window.outerWidth<850){
-           setLeft(8)
-           setRight(8)
+        const syncLayout = () => {
+            if (window.outerWidth < 850) {
+                setLeft(8)
+                setRight(8)
+            }
         }
+        queueMicrotask(syncLayout)
         window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize)
     },[])
 
     return <div className={styles.container}>
@@ -177,6 +181,9 @@ export default function Page(props:any) {
 
                 </div>
 
+                <footer className="p-8 text-center text-sm text-gray-500">
+                    v{packageJson.version}
+                </footer>
 
             </main>
 

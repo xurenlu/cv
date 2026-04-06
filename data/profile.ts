@@ -1,5 +1,4 @@
-export default
-{
+const profile = {
     en:
         {
             profile:{
@@ -64,6 +63,14 @@ I maintain a strong interest in technology and in the last 4 years I have learne
                 }
             ],
             employmentHistory:[
+                {
+                    jobTitle:"Partner",
+                    employer:"Hangzhou Ruoran Technology",
+                    startDate:"Feb,2025",
+                    endDate:"Present",
+                    city:"Hangzhou",
+                    description:`AI consulting partner. Designed the AI agent and system architecture for Hangzhou Feifan School's AI learning practice device; the product delivers AI homework grading and explanations. Phase one: ~1,500 students in active use, with manual review participation reduced to 5%. Built an AI SCRM platform covering multi-dimensional sales script supervision, intelligent daily reports, workload supervision, intelligent sentiment monitoring, and public-opinion monitoring.`
+                },
                 {
                     jobTitle:"R&D",
                     employer:"Yahoo! China",
@@ -152,6 +159,14 @@ I maintain a strong interest in technology and in the last 4 years I have learne
         ],
         employmentHistory:[
             {
+                jobTitle:"合伙人",
+                employer:"杭州若然科技",
+                startDate:"2025年2月",
+                endDate:"至今",
+                city:"杭州",
+                description:`对外提供 AI 咨询类服务。完成杭州非凡学校 AI 学练机的 AI 智能体设计与系统架构；学练机已实现 AI 作业批改与讲解，一期约 1500 名学生实际使用，人工审核参与率降至 5%。另搭建 AI SCRM 系统，主要功能包括多维度销售话术监督、智能日报、工作量监督、智能情绪监控与舆情监控。`
+            },
+            {
                 jobTitle:"PHP工程师",
                 employer:"雅虎中国",
                 startDate:"Aug,2007",
@@ -198,3 +213,5 @@ I maintain a strong interest in technology and in the last 4 years I have learne
 
     }
 }
+
+export default profile
