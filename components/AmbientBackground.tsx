@@ -35,7 +35,7 @@ export default function AmbientBackground() {
       el.width = w
       el.height = h
       stars.length = 0
-      const count = Math.min(120, Math.floor((w * h) / 18000))
+      const count = Math.min(180, Math.floor((w * h) / 11000))
       for (let i = 0; i < count; i++) {
         stars.push({
           x: Math.random() * w,
@@ -56,8 +56,8 @@ export default function AmbientBackground() {
       for (const st of stars) {
         const tw = 0.65 + 0.35 * Math.sin(t * 2 + st.x * 0.01)
         draw.fillStyle = isDark
-          ? `rgba(200, 210, 255, ${st.a * tw})`
-          : `rgba(80, 100, 180, ${st.a * tw * 0.45})`
+          ? `rgba(200, 220, 255, ${st.a * tw})`
+          : `rgba(50, 75, 170, ${st.a * tw * 0.72})`
         draw.beginPath()
         draw.arc(st.x, st.y, st.r, 0, Math.PI * 2)
         draw.fill()

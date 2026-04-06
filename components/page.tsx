@@ -50,15 +50,32 @@ export type ResumePageProps = ProfileBlock & {
   locale: Locale
 }
 
-const sectionMotion = (reduce: boolean | null) =>
-  reduce
-    ? {}
-    : {
-        initial: { opacity: 0, y: 12 },
-        whileInView: { opacity: 1, y: 0 },
-        viewport: { once: true, margin: '-32px' as const },
-        transition: { duration: 0.42, ease: [0.22, 1, 0.36, 1] as const },
-      }
+/** Mount-time stagger — avoids whileInView failing (sections stuck at opacity 0). */
+function sectionMotion(reduce: boolean | null, order: number) {
+  if (reduce) {
+    return { initial: false as const, animate: { opacity: 1 } }
+  }
+  return {
+    initial: { opacity: 0, y: 16 },
+    animate: { opacity: 1, y: 0 },
+    transition: {
+      duration: 0.48,
+      delay: 0.06 + order * 0.07,
+      ease: [0.22, 1, 0.36, 1] as const,
+    },
+  }
+}
+
+function heroMotion(reduce: boolean | null) {
+  if (reduce) {
+    return { initial: false as const, animate: { opacity: 1 } }
+  }
+  return {
+    initial: { opacity: 0, y: 12 },
+    animate: { opacity: 1, y: 0 },
+    transition: { duration: 0.52, ease: [0.22, 1, 0.36, 1] as const },
+  }
+}
 
 export default function Page(props: ResumePageProps) {
   const { profile, locale } = props
@@ -120,7 +137,7 @@ export default function Page(props: ResumePageProps) {
     </span>
   ))
 
-  const sm = sectionMotion(reduceMotion ?? false)
+  const hm = heroMotion(reduceMotion ?? false)
 
   return (
     <>
@@ -138,12 +155,7 @@ export default function Page(props: ResumePageProps) {
         <Header locale={locale} />
 
         <div id="main-area" className={styles.mainArea}>
-          <motion.header
-            className={styles.hero}
-            initial={reduceMotion ? false : { opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: reduceMotion ? 0 : 0.42, ease: [0.22, 1, 0.36, 1] }}
-          >
+          <motion.header className={styles.hero} {...hm}>
             <div className={styles.avatarWrap}>
               <Image
                 src={avatar}
@@ -173,34 +185,52 @@ export default function Page(props: ResumePageProps) {
 
           <div className={styles.layout}>
             <div className={styles.columnMain}>
-              <motion.section className={styles.card} {...sm}>
+              <motion.section
+                className={styles.card}
+                {...sectionMotion(reduceMotion ?? false, 0)}
+              >
                 <h2 className={styles.sectionTitle}>{t.sections.profile}</h2>
                 <p className={styles.bodyText}>{props.professionalSummary}</p>
               </motion.section>
 
-              <motion.section className={styles.card} {...sm}>
+              <motion.section
+                className={styles.card}
+                {...sectionMotion(reduceMotion ?? false, 1)}
+              >
                 <h2 className={styles.sectionTitle}>{t.sections.employment}</h2>
                 <ul className={styles.list}>{employments}</ul>
               </motion.section>
 
-              <motion.section className={styles.card} {...sm}>
+              <motion.section
+                className={styles.card}
+                {...sectionMotion(reduceMotion ?? false, 2)}
+              >
                 <h2 className={styles.sectionTitle}>{t.sections.education}</h2>
                 <ul className={styles.list}>{educationItems}</ul>
               </motion.section>
 
-              <motion.section className={styles.card} {...sm}>
+              <motion.section
+                className={styles.card}
+                {...sectionMotion(reduceMotion ?? false, 3)}
+              >
                 <h2 className={styles.sectionTitle}>{t.sections.projects}</h2>
                 <ul className={styles.list}>{projects}</ul>
               </motion.section>
 
-              <motion.section className={styles.card} {...sm}>
+              <motion.section
+                className={styles.card}
+                {...sectionMotion(reduceMotion ?? false, 4)}
+              >
                 <h2 className={styles.sectionTitle}>{t.sections.skills}</h2>
                 <div className={styles.skills}>{skillPills}</div>
               </motion.section>
             </div>
 
             <aside className={styles.columnAside}>
-              <motion.section className={styles.card} {...sm}>
+              <motion.section
+                className={styles.card}
+                {...sectionMotion(reduceMotion ?? false, 5)}
+              >
                 <h2 className={styles.sectionTitle}>{t.sections.contact}</h2>
                 <div className={styles.contactBlock}>
                   <div className={styles.contactRow}>

@@ -11,7 +11,7 @@
   inset: 0;
   width: 100%;
   height: 100%;
-  opacity: 0.55;
+  opacity: 0.78;
 }
 
 .fogA,
@@ -20,7 +20,7 @@
   inset: -20%;
   border-radius: 50%;
   filter: blur(80px);
-  opacity: 0.35;
+  opacity: 0.48;
   animation: drift 28s ease-in-out infinite;
 }
 
@@ -72,5 +72,6 @@
   .fogA,
   .fogB {
     animation: none;
+    opacity: 0.42;
   }
 }
