@@ -42,14 +42,29 @@ I maintain a strong interest in technology and in the last 4 years I have learne
             ],
             projects:[
                 {
-                    subject:"unhtml.com",
-                    desc:"Little tool to generate snapshots for code snippets.\ntech stack:html2canvas,typescript.",
-                    link:"https://unhtml.com/"
+                    subject:"marstaff",
+                    desc:"Go-based extensible AI agent platform: multi-provider LLMs, tools & SKILL.md skills, MCP, WebSocket streaming, Telegram/Matrix bots, and AFK background tasks (cron, monitoring, notifications).",
+                    link:"https://github.com/xurenlu/marstaff"
                 },
                 {
-                    subject: "https://ip4.dev",
-                    desc:"Http api service provide geo information of specific IP.\ngeo data from maxmind.I provide golang-wrapper of c sdk from maxmind.web UI was based on vue3.\ngolang source code:https://github.com/gotapi/gmm",
-                    link:"https://ip4.dev/"
+                    subject:"houyi",
+                    desc:"WeCom (WeChat Work) session archive backend: Spring Boot 3 + Java 21, pulls and stores chat/media with OSS, MySQL, Redis, and RocketMQ; observability via Prometheus.",
+                    link:"https://github.com/xurenlu/houyi"
+                },
+                {
+                    subject:"sslcat",
+                    desc:"Go reverse proxy / edge server that provisions and renews HTTPS certificates automatically (Let’s Encrypt). Homepage: sslcat.com",
+                    link:"https://github.com/xurenlu/sslcat"
+                },
+                {
+                    subject:"fastv",
+                    desc:"macOS Swift/SwiftUI app “妙打”: local voice-to-text input (SenseVoice + ONNX), optional IMAP mail client, and an HTTP/WebSocket STT API for integrations.",
+                    link:"https://github.com/xurenlu/fastv"
+                },
+                {
+                    subject:"cdnproxy",
+                    desc:"Go proxy for public CDN assets and AI APIs in restricted networks: path-based CDN forwarding, disk cache, streaming, WebSocket/SSE, and admin whitelist.",
+                    link:"https://github.com/xurenlu/cdnproxy"
                 }
             ],
             education:[
@@ -195,19 +210,29 @@ I maintain a strong interest in technology and in the last 4 years I have learne
         ],
         projects:[
             {
-                subject:"unhtml.com",
-                desc:"一个基于nextjs的小工具，用以生成小段代码片段的截图。主要技术点有html2canvas,typescript",
-                link:"https://unhtml.com/"
+                subject:"marstaff",
+                desc:"Go 实现的 AI Agent 平台：多厂商模型、工具与 SKILL 技能、MCP、WebSocket 流式输出、Telegram/Matrix 接入、离场 AFK 定时与监控任务等。",
+                link:"https://github.com/xurenlu/marstaff"
             },
             {
-                subject: "https://ip4.dev",
-                desc:"一个基于查询指定IP的地理信息的API。地理数据来自maxmind，用golang包装了maxmind的c library,提供了一个http的api。web界面使用vue3构建。golang版代码参见:https://github.com/gotapi/gmm",
-                link:"https://ip4.dev/"
+                subject:"houyi",
+                desc:"企业微信会话存档系统（后羿）：Spring Boot 3 + Java 21，拉取并存储会话与媒体；阿里云 OSS、MySQL、Redis、RocketMQ，配套监控与文档。",
+                link:"https://github.com/xurenlu/houyi"
             },
             {
-                subject: "kuafu",
-                desc:"一个web服务器代理，类似nginx,主要提供了基于consul的后端机器动态寻址，和基于cookie的安全防护。",
-                link:"https://github.com/gotapi/kuafu"
+                subject:"sslcat",
+                desc:"支持自动 HTTPS 证书申请与续期的 Go 反向代理 / 边缘网关，站点 sslcat.com。",
+                link:"https://github.com/xurenlu/sslcat"
+            },
+            {
+                subject:"fastv（妙打）",
+                desc:"macOS 智能语音输入法：本地语音转写（SenseVoice/ONNX）、可选 IMAP 邮箱，并提供 HTTP/WebSocket STT API 供外部集成。",
+                link:"https://github.com/xurenlu/fastv"
+            },
+            {
+                subject:"cdnproxy",
+                desc:"在受限网络中代理公共 CDN 与 AI API 的 Go 服务：路径转发、磁盘缓存、大文件与 Range、WebSocket/SSE 流式、管理白名单等。",
+                link:"https://github.com/xurenlu/cdnproxy"
             }
         ]
 
