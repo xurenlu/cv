@@ -2,7 +2,7 @@ const profile = {
     en:
         {
             profile:{
-                wantedJobTitle:"FullStack",
+                wantedJobTitle:"AI Consultant · Agent & AI Architecture",
                 firstName:"renlu",
                 lastName:"",
                 email:"xurenlu@gmail.com",
@@ -12,10 +12,11 @@ const profile = {
                 avatar:"",
                 dateOfBirth:"Aug,1983"
             },
-            professionalSummary:`I have over 17 years of programming experience in C, PHP, Java, Ruby, Python, Golang, TypeScript and many other languages.
-Since 2016, I have been a technical manager and have experience leading a team of 60 people in various positions including server-side and front-end development, QA, client-side R&D, product design, etc.
-I am an introvert, a good listener and easy to empathize with. Can also stay focused for a long time.
-I maintain a strong interest in technology and in the last 4 years I have learned charming technologies such as golang, typescript, nextjs, etc.`,
+            professionalSummary:`Career focus: AI consulting, agent design, and AI/LLM architecture—helping organizations turn models into reliable products. Open to roles such as AI advisor, agent designer, or head of AI platform/architecture.
+
+17+ years in engineering and leadership (large-scale systems, compliance, mobile and web). Recent work centers on custom agents, prompt and evaluation pipelines, speech/vision LLM integrations, and end-to-end AI solutions in education and enterprise.
+
+Calm communicator, strong listener, able to go deep for long stretches. Core stack: Go, TypeScript, Python, and mainstream LLM APIs; hands-on with Marstaff and other agent-oriented projects.`,
             links:[
                 {
                     label:"github",
@@ -29,14 +30,14 @@ I maintain a strong interest in technology and in the last 4 years I have learne
             ],
             skills:[
                 {
-                    skill:"public speaking",
+                    skill:"LLM & agent systems",
                     score:5
                 },{
-                    skill:"event planning",
+                    skill:"AI architecture & consulting",
                     score:5
                 },
                 {
-                    skill:"active listening",
+                    skill:"Prompting & model evaluation",
                     score:5
                 }
             ],
@@ -124,7 +125,7 @@ I maintain a strong interest in technology and in the last 4 years I have learne
         },
     zh:{
         profile:{
-            wantedJobTitle:"研发经理",
+            wantedJobTitle:"AI 咨询顾问 · Agent / AI 架构",
             firstName:"黄小滚",
             lastName:"",
             email:"xurenlu@gmail.com",
@@ -134,9 +135,9 @@ I maintain a strong interest in technology and in the last 4 years I have learne
             avatar:"",
             dateOfBirth:"Aug,1983"
         },
-        professionalSummary:`拥有17年的编程经验，包括C,PHP,Java,Ruby,Python，Golang,Typescript等不同的编程语言。
-情绪稳定、善于倾听、共情能力强。也可以保持长时间的专注。
-一直保持着对技术的强烈兴趣，近4年来学习了golang,typescript,nextjs等新兴的技术。
+        professionalSummary:`求职方向全面转向 AI：希望担任 AI 咨询顾问、智能体（Agent）设计师或企业 AI / Agent 方向架构师，也可承接技术咨询与方案落地并重的角色。
+
+十余年研发与架构经验打底（大规模系统、合规与风控、移动端与 Web）。近年聚焦大模型应用、自研 Agent 平台、提示词与多模型评测、语音与教学场景落地；既能做路线规划与对外沟通，也能带队工程交付。技术栈以 Go / TypeScript / Python 及常见 LLM 接入为主，情绪稳定、善于倾听、可长期专注攻坚。
     `,
         links:[
             {
@@ -150,14 +151,14 @@ I maintain a strong interest in technology and in the last 4 years I have learne
         ],
         skills:[
             {
-                skill:"公开演讲",
+                skill:"大模型与 Agent 工程",
                 score:5
             },{
-                skill:"事务规划",
+                skill:"AI 架构与咨询交付",
                 score:5
             },
             {
-                skill:"积极倾听",
+                skill:"提示词与多模型评测",
                 score:5
             }
         ],
