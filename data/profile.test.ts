@@ -16,4 +16,13 @@ describe('profile data', () => {
     expect(profile.zh.employmentHistory.length).toBeGreaterThan(0)
     expect(profile.en.employmentHistory.length).toBeGreaterThan(0)
   })
+
+  it('lists shipped apps 动手学 / 妙墨 / fogBoard in projects', () => {
+    const zhSubjects = profile.zh.projects.map((p) => p.subject)
+    expect(zhSubjects).toContain('动手学')
+    expect(zhSubjects).toContain('妙墨')
+    expect(zhSubjects).toContain('fogBoard')
+    expect(profile.en.projects.some((p) => p.subject.includes('动手学'))).toBe(true)
+    expect(profile.en.projects.some((p) => p.subject.includes('妙墨'))).toBe(true)
+  })
 })

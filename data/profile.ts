@@ -32,6 +32,21 @@ Calm communicator, strong listener, able to go deep for long stretches. Core sta
             ],
             projects:[
                 {
+                    subject:"DongShouXue (动手学)",
+                    desc:"Shipped iOS app for East Asian language learning — interactive practice and structured lessons (App Store).",
+                    link:"https://apps.apple.com/cn/search?term=%E5%8A%A8%E6%89%8B%E5%AD%A6"
+                },
+                {
+                    subject:"MiaoMo (妙墨)",
+                    desc:"Shipped Markdown editor for macOS — local-first writing workflow (Mac App Store).",
+                    link:"https://apps.apple.com/cn/search?term=%E5%A6%99%E5%A2%A8"
+                },
+                {
+                    subject:"fogBoard",
+                    desc:"Shipped whiteboard app — infinite canvas for sketching, meetings, and teaching.",
+                    link:"https://apps.apple.com/cn/search?term=fogBoard"
+                },
+                {
                     subject:"marstaff",
                     desc:"Go-based extensible AI agent platform: multi-provider LLMs, tools & SKILL.md skills, MCP, WebSocket streaming, Telegram/Matrix bots, and AFK background tasks (cron, monitoring, notifications).",
                     link:"https://github.com/xurenlu/marstaff"
@@ -196,6 +211,21 @@ Calm communicator, strong listener, able to go deep for long stretches. Core sta
             }
         ],
         projects:[
+            {
+                subject:"动手学",
+                desc:"已上架 iOS 应用：东亚语言学习，含互动练习与结构化课程（App Store）。",
+                link:"https://apps.apple.com/cn/search?term=%E5%8A%A8%E6%89%8B%E5%AD%A6"
+            },
+            {
+                subject:"妙墨",
+                desc:"已上架 macOS 端 Markdown 编辑器，本地优先的写作体验（Mac App Store）。",
+                link:"https://apps.apple.com/cn/search?term=%E5%A6%99%E5%A2%A8"
+            },
+            {
+                subject:"fogBoard",
+                desc:"已上架白板应用：无限画布，适用于手绘、会议记录与教学演示。",
+                link:"https://apps.apple.com/cn/search?term=fogBoard"
+            },
             {
                 subject:"marstaff",
                 desc:"Go 实现的 AI Agent 平台：多厂商模型、工具与 SKILL 技能、MCP、WebSocket 流式输出、Telegram/Matrix 接入、离场 AFK 定时与监控任务等。",
