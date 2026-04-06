@@ -3,87 +3,49 @@
 @source "../pages/**/*.{js,ts,jsx,tsx}";
 @source "../components/**/*.{js,ts,jsx,tsx}";
 
-@media print {
-  #header-wrapper {
-    visibility: hidden;
-  }
-}
-
-
-
-
-
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
-}
-
-
-
+/* Apple-style resume tokens (screen) */
 :root {
-  --bg: #fff;
-  --text: #000;
-  --textTinted: rgba(0, 0, 0, 0.5);
-  --brand: #e38356;
-  --brandActive: #b3613b;
-  --brandTinted: rgba(227, 131, 86, 0.2);
-  --brandTintedActive: rgba(227, 131, 86, 0.33);
-  --headerBg: rgba(255, 255, 255, 0.6);
-  --border: rgba(0, 0, 0, 0.08);
-  --borderActive: rgba(0, 0, 0, 0.25);
-  --star: #fece02;
-  --fontFamily: 'GT Walsheim Pro', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
-  Helvetica Neue, sans-serif;
+  --resume-bg: #f5f5f7;
+  --resume-card: #ffffff;
+  --resume-text: #1d1d1f;
+  --resume-text-secondary: #424245;
+  --resume-muted: #6e6e73;
+  --resume-border: rgba(0, 0, 0, 0.08);
+  --resume-accent: #0071e3;
+  --resume-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  --resume-shadow-elevated: 0 4px 24px rgba(0, 0, 0, 0.08);
+  --resume-pill-bg: rgba(0, 0, 0, 0.06);
+  --headerBg: rgba(255, 255, 255, 0.72);
+  --fontFamily: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'SF Pro Display',
+    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  /* legacy (code blocks / old tokens) */
+  --bg: var(--resume-bg);
+  --text: var(--resume-text);
   --boxBg: #f3f3f3;
-  --siteWidth: 83ch;
-  --inputBg: white;
-  --likeButton: rgba(0, 0, 0, 0.05);
-  --likeButtonHover: rgba(0, 0, 0, 0.1);
-  --shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  --secondary: #caca28;
-  --transparent: rgba(255, 255, 255, 0);
-  --tag-color: rgba(82, 82, 91, 1);
-  --tag-bg-color: rgba(244, 244, 245, 1);
+  --brand: #0071e3;
+  --brandTinted: rgba(0, 113, 227, 0.12);
+  --border: var(--resume-border);
 }
 
 [data-theme='dark'] {
-  --bg: #161515;
-  --text: #fff;
-  --textTinted: rgba(255, 255, 255, 0.5);
-  --headerBg: rgba(22, 21, 21, 0.6);
-  --border: rgba(255, 255, 255, 0.08);
-  --borderActive: rgba(255, 255, 255, 0.25);
-  --boxBg: #1f1e1d;
-  --star: #fef102;
-  --inputBg: #292929;
-  --likeButton: rgba(255, 255, 255, 0.2);
-  --likeButtonHover: rgba(255, 255, 255, 0.3);
-  --secondary: yellow;
-  --transparent: rgba(0, 0, 0, 0);
-  --tag-color: rgba(228, 228, 231, 1);
-  --tag-bg-color: rgba(39, 39, 42, 1);
+  --resume-bg: #000000;
+  --resume-card: #1c1c1e;
+  --resume-text: #f5f5f7;
+  --resume-text-secondary: #d1d1d6;
+  --resume-muted: #8e8e93;
+  --resume-border: rgba(255, 255, 255, 0.12);
+  --resume-accent: #0a84ff;
+  --resume-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+  --resume-shadow-elevated: 0 4px 24px rgba(0, 0, 0, 0.45);
+  --resume-pill-bg: rgba(255, 255, 255, 0.08);
+  --headerBg: rgba(28, 28, 30, 0.82);
+  --bg: var(--resume-bg);
+  --text: var(--resume-text);
+  --boxBg: #2c2c2e;
+}
+
+html {
+  color-scheme: light dark;
 }
 
 html,
@@ -95,32 +57,65 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+body {
+  color: var(--resume-text);
+  background: var(--resume-bg);
+}
+
 a {
   color: inherit;
   text-decoration: none;
 }
 
 *,
-*:before,
-*:after {
+*::before,
+*::after {
   box-sizing: border-box;
-  margin-top: 0;
 }
 
-body {
-  color: var(--text);
-  background-color: var(--bg);
-}
+@media print {
+  @page {
+    size: A4;
+    margin: 12mm 14mm;
+  }
 
-h2 {
-  margin-bottom: 30px;
-  font-weight: 800;
-  font-size: 28px;
-  letter-spacing: -0.3px;
+  .no-print {
+    display: none !important;
+  }
 
-@media (min-width: 480px) {
-  margin-bottom: 55px;
-}
+  html,
+  body {
+    background: #fff !important;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  :root,
+  [data-theme='dark'] {
+    --resume-bg: #ffffff;
+    --resume-card: #ffffff;
+    --resume-text: #111111;
+    --resume-text-secondary: #333333;
+    --resume-muted: #555555;
+    --resume-border: rgba(0, 0, 0, 0.12);
+    --resume-accent: #0071e3;
+    --resume-shadow: none;
+    --resume-shadow-elevated: none;
+    --resume-pill-bg: rgba(0, 0, 0, 0.06);
+  }
+
+  body {
+    color: #111 !important;
+    background: #fff !important;
+    font-size: 10.5pt;
+    line-height: 1.45;
+  }
+
+  #main-area {
+    max-width: none !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
 }
 
 /*

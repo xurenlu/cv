@@ -15,7 +15,6 @@ export const uiLabels = {
       projects: 'Side projects',
       skills: 'Skills',
       contact: 'Contact',
-      links: 'Links',
     },
     labels: {
       objective: 'Career focus',
@@ -39,7 +38,6 @@ export const uiLabels = {
       projects: '项目与作品',
       skills: '技能',
       contact: '联系方式',
-      links: '链接',
     },
     labels: {
       objective: '求职方向',

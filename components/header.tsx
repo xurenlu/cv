@@ -1,83 +1,83 @@
 import Link from 'next/link'
 import ThemeChanger from './themechanger'
-import { useRouter } from 'next/router'
-import Image from 'next/image'
 import type { ReactElement } from 'react'
-import avatar from 'public/letter-r.png'
 import styles from './header.module.scss'
-import {useTheme} from "next-themes";
+import { uiLabels, type Locale } from '../data/uiLabels'
 
-const links = [
+type HeaderProps = {
+  locale: Locale
+}
 
-  { name: 'English', path: '/default/en' ,target:""},
-  { name: '简体中文', path: '/default/zh' ,target:""},
-]
+const Header = ({ locale }: HeaderProps): ReactElement => {
+  const t = uiLabels[locale]
 
-const Header = (): ReactElement => {
-  const { setTheme, theme } = useTheme()
-  function gen(){
-    setTheme("light")
-
-    //@ts-ignore
-    html2canvas(document.querySelector("#main-area"), {
+  function exportMainAreaAsImage() {
+    const el = document.querySelector('#main-area')
+    if (!el) return
+    const html2canvas = (
+      window as unknown as {
+        html2canvas?: (
+          el: Element,
+          opts: Record<string, unknown>
+        ) => Promise<HTMLCanvasElement>
+      }
+    ).html2canvas
+    if (!html2canvas) return
+    html2canvas(el, {
       allowTaint: true,
-      //foreignObjectRendering:true,
       useCORS: true,
-      backgroundColor:null
-    }).then((canvas:any) => {
-      console.log(canvas);
-      let dataURL = canvas.toDataURL('image/jpeg');
-      let a = document.createElement("A");
-      //@ts-ignore
-      a.href = dataURL;
-      //@ts-ignore
-      a.download = `resume-${new Date().toISOString()}.jpg`;
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-    });
-     /**
-    let opt = {
-      margin:       1,
-      filename:     'resume.pdf',
-      image:        { type: 'jpeg', quality: 0.98 },
-      html2canvas:  { scale: 2 },
-      jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
-    };
-    //@ts-ignore
-    html2pdf().set(opt).from(document.querySelector("#main-area")).save();
-     */
+      backgroundColor: null,
+      scale: 2,
+    }).then((canvas: HTMLCanvasElement) => {
+      const dataURL = canvas.toDataURL('image/jpeg', 0.92)
+      const a = document.createElement('a')
+      a.href = dataURL
+      a.download = `resume-${new Date().toISOString().slice(0, 10)}.jpg`
+      document.body.appendChild(a)
+      a.click()
+      document.body.removeChild(a)
+    })
   }
-  const router = useRouter()
-  const pathname = router.pathname.split('/[')[0] // active paths on dynamic subpages
+
   return (
     <>
-      <header id="header-wrapper" className={styles.header}>
-        <div className={styles.container}>
-          <nav className={styles.nav}>
+      <header id="header-wrapper" className={`${styles.header} no-print`}>
+        <div className={styles.inner}>
+          <nav className={styles.nav} aria-label="Language">
             <ol className={styles.links}>
-              {links.map(({ name, path, target:string }) => {
-                let target;
-                if (target === '_blank') {
-                  return (
-                    <li key={path} className={pathname === path ? styles.linkActive : styles.link}>
-                      <a href={path} target="_blank" rel="noopener noreferrer">
-                        {name}
-                      </a>
-                    </li>
-                  )
+              <li
+                className={
+                  locale === 'en' ? styles.linkActive : styles.link
                 }
-                return (
-                  <li key={path} className={pathname === path ? styles.linkActive : styles.link}>
-                    <Link href={path}>
-                      {name}
-                    </Link>
-                  </li>
-                )
-              })}
+              >
+                <Link href="/default/en">{t.navLangEn}</Link>
+              </li>
+              <li
+                className={
+                  locale === 'zh' ? styles.linkActive : styles.link
+                }
+              >
+                <Link href="/default/zh">{t.navLangZh}</Link>
+              </li>
             </ol>
           </nav>
-          <ThemeChanger />
+          <div className={styles.actions}>
+            <button
+              type="button"
+              className={styles.ghostBtn}
+              onClick={() => window.print()}
+            >
+              {t.printOrPdf}
+            </button>
+            <button
+              type="button"
+              className={styles.ghostBtn}
+              onClick={exportMainAreaAsImage}
+            >
+              {t.exportImage}
+            </button>
+            <ThemeChanger />
+          </div>
         </div>
       </header>
       <div className={styles.spacer} />

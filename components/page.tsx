@@ -2,7 +2,6 @@
 
 import Head from 'next/head'
 import Image from 'next/image'
-import Link from 'next/link'
 import { motion, useReducedMotion } from 'framer-motion'
 import { BiCurrentLocation, BiMailSend, BiPhone } from 'react-icons/bi'
 import packageJson from '../package.json'
@@ -41,7 +40,6 @@ type ProfileBlock = {
     city: string
   }
   professionalSummary: string
-  links: { label: string; href: string }[]
   skills: { skill: string; score: number }[]
   education: EducationItem[]
   employmentHistory: EmploymentItem[]
@@ -113,14 +111,6 @@ export default function Page(props: ResumePageProps) {
         </a>
       </h3>
       <p className={styles.itemDesc}>{item.desc}</p>
-    </li>
-  ))
-
-  const links = props.links.map((item) => (
-    <li key={item.label}>
-      <Link href={item.href} target="_blank" rel="noreferrer">
-        {item.label}
-      </Link>
     </li>
   ))
 
@@ -241,11 +231,6 @@ export default function Page(props: ResumePageProps) {
                     </a>
                   </div>
                 </div>
-              </motion.section>
-
-              <motion.section className={styles.card} {...sm}>
-                <h2 className={styles.sectionTitle}>{t.sections.links}</h2>
-                <ul className={styles.linksList}>{links}</ul>
               </motion.section>
             </aside>
           </div>

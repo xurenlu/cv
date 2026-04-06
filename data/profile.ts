@@ -17,17 +17,6 @@ const profile = {
 17+ years in engineering and leadership (large-scale systems, compliance, mobile and web). Recent work centers on custom agents, prompt and evaluation pipelines, speech/vision LLM integrations, and end-to-end AI solutions in education and enterprise.
 
 Calm communicator, strong listener, able to go deep for long stretches. Core stack: Go, TypeScript, Python, and mainstream LLM APIs; hands-on with Marstaff and other agent-oriented projects.`,
-            links:[
-                {
-                    label:"github",
-                    href:"https://github.com/xurenlu"
-                },
-            
-                {
-                    label:"ip4.dev",
-                    href:"https://ip4.dev/"
-                }
-            ],
             skills:[
                 {
                     skill:"LLM & agent systems",
@@ -139,16 +128,6 @@ Calm communicator, strong listener, able to go deep for long stretches. Core sta
 
 十余年研发与架构经验打底（大规模系统、合规与风控、移动端与 Web）。近年聚焦大模型应用、自研 Agent 平台、提示词与多模型评测、语音与教学场景落地；既能做路线规划与对外沟通，也能带队工程交付。技术栈以 Go / TypeScript / Python 及常见 LLM 接入为主，情绪稳定、善于倾听、可长期专注攻坚。
     `,
-        links:[
-            {
-                label:"github",
-                href:"https://github.com/xurenlu"
-            },
-            {
-                label:"ip4.dev",
-                href:"https://ip4.dev/"
-            }
-        ],
         skills:[
             {
                 skill:"大模型与 Agent 工程",
