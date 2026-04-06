@@ -5,8 +5,8 @@ const profile = {
                 wantedJobTitle:"FullStack",
                 firstName:"renlu",
                 lastName:"",
-                email:"hi@some-domain.com",
-                phone:"180000000",
+                email:"xurenlu@gmail.com",
+                phone:"18006787690",
                 country:"China",
                 city:"Hangzhou",
                 avatar:"",
@@ -19,7 +19,7 @@ I maintain a strong interest in technology and in the last 4 years I have learne
             links:[
                 {
                     label:"github",
-                    href:"https://github.com/"
+                    href:"https://github.com/xurenlu"
                 },
             
                 {
@@ -84,7 +84,15 @@ I maintain a strong interest in technology and in the last 4 years I have learne
                     startDate:"Feb,2025",
                     endDate:"Present",
                     city:"Hangzhou",
-                    description:`AI consulting partner. Designed the AI agent and system architecture for Hangzhou Feifan School's AI learning practice device; the product delivers AI homework grading and explanations. Phase one: ~1,500 students in active use, with manual review participation reduced to 5%. Built an AI SCRM platform covering multi-dimensional sales script supervision, intelligent daily reports, workload supervision, intelligent sentiment monitoring, and public-opinion monitoring.`
+                    description:`AI consulting. For Hangzhou Feifan School (Fuyang) AI learning device: custom agents and system architecture; AI homework grading and tutoring; ~1,500 students in phase one with manual review ~5%. Iterated prompts per subject/lesson and benchmarked Google, Doubao, Qwen and other models; improved speech-to-text with multiple AI pipelines. Built an AI SCRM: sales script supervision, intelligent daily reports, workload tracking, sentiment and public-opinion monitoring.`
+                },
+                {
+                    jobTitle:"Technical Lead",
+                    employer:"Huashan Finance",
+                    startDate:"2020",
+                    endDate:"2024",
+                    city:"Hangzhou",
+                    description:`Led compliance and risk-control platforms. Evolved from early MongoDB-centric personal WeChat compliance to enterprise WeChat–wide coverage; Elasticsearch plus a rules engine; triggers expanded from brittle keyword-only flows to QR codes, external links, payment codes, and ML-based detection. Media ingestion and security audit at roughly 30 million chat messages per day. Integrated AI into compliance and monitoring in recent years.`
                 },
                 {
                     jobTitle:"R&D",
@@ -112,15 +120,6 @@ I maintain a strong interest in technology and in the last 4 years I have learne
                     description:`glz.cn is a website that provides home renovation services. I was mainly responsible for the recruitment and performance evaluation of the technical R&D team in the early stage. In the later stage, I also lead the content operation and advertising team.
             `
                 },
-                {
-                    jobTitle:"R&D Manager",
-                    employer:"Shanghai not-exists Ltd",
-                    startDate:"Nov,2020",
-                    endDate:"-",
-                    city:"Shanghai",
-                    description:`1. Responsible for the recruitment and performance evaluation of the technical R&D team.
-            `
-                }
             ]
         },
     zh:{
@@ -128,8 +127,8 @@ I maintain a strong interest in technology and in the last 4 years I have learne
             wantedJobTitle:"研发经理",
             firstName:"黄小滚",
             lastName:"",
-            email:"hi@some-domain.com",
-            phone:"18000000000",
+            email:"xurenlu@gmail.com",
+            phone:"18006787690",
             country:"中国",
             city:"杭州",
             avatar:"",
@@ -142,7 +141,7 @@ I maintain a strong interest in technology and in the last 4 years I have learne
         links:[
             {
                 label:"github",
-                href:"https://github.com/"
+                href:"https://github.com/xurenlu"
             },
             {
                 label:"ip4.dev",
@@ -179,7 +178,15 @@ I maintain a strong interest in technology and in the last 4 years I have learne
                 startDate:"2025年2月",
                 endDate:"至今",
                 city:"杭州",
-                description:`对外提供 AI 咨询类服务。完成杭州非凡学校 AI 学练机的 AI 智能体设计与系统架构；学练机已实现 AI 作业批改与讲解，一期约 1500 名学生实际使用，人工审核参与率降至 5%。另搭建 AI SCRM 系统，主要功能包括多维度销售话术监督、智能日报、工作量监督、智能情绪监控与舆情监控。`
+                description:`对外提供 AI 咨询。面向杭州非凡学校（富阳）AI 学练机：自研智能体与整体架构，落地 AI 作业批改与讲解；一期约 1500 名学生使用，人工审核参与率约 5%。针对各学科/课型持续打磨提示词，并横向评测 Google、豆包、通义等模型；语音转写链路采用多路 AI 方案提升准确率。另搭建 AI SCRM：销售话术监督、智能日报、工作量监督、情绪与舆情监控。`
+            },
+            {
+                jobTitle:"技术负责人",
+                employer:"华山财经",
+                startDate:"2020年",
+                endDate:"2024年",
+                city:"杭州",
+                description:`主导合规与风控相关系统。从早期 MongoDB 为主的个人微信合规，演进为全面企业微信场景；检索与审计结合 Elasticsearch、规则引擎，触发方式从关键词扩展到二维码、外链、收款码及机器学习触发等。支撑媒体消息等高吞吐场景，日均约 3000 万条聊天消息入库与安全审计。近年将 AI 能力持续融入合规与业务风控。`
             },
             {
                 jobTitle:"PHP工程师",

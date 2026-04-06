@@ -1,9 +1,8 @@
-
 import profile from '../../data/profile'
-import Page from "../../components/page";
+import Page, { type ResumePageProps } from '../../components/page'
 
-export default function Home(props: Record<string, unknown>) {
-    return <Page {...props}></Page>
+export default function Home(props: ResumePageProps) {
+  return <Page {...props} />
 }
 
 export async function getStaticPaths() {
@@ -19,6 +18,7 @@ export async function getStaticProps({
     params?: { lang?: string }
 }) {
     const lang = params?.lang
-    const data = lang === 'zh' ? profile.zh : profile.en
-    return { props: data }
+    const locale = lang === 'zh' ? 'zh' : 'en'
+    const data = locale === 'zh' ? profile.zh : profile.en
+    return { props: { ...data, locale } }
 }

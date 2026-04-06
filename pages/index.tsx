@@ -1,14 +1,10 @@
-
 import profile from '../data/profile'
-import Page from "../components/page";
+import Page, { type ResumePageProps } from '../components/page'
 
-
-
-
-export default function Home(props:any) {
-    return <Page {...props}></Page>
+export default function Home(props: ResumePageProps) {
+  return <Page {...props} />
 }
 
-export async function getServerSideProps(){
-    return {props:profile.zh}
+export async function getServerSideProps() {
+  return { props: { ...profile.zh, locale: 'zh' as const } }
 }
