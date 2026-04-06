@@ -89,7 +89,7 @@ Calm communicator, strong listener, able to go deep for long stretches. Core sta
                 },
                 {
                     jobTitle:"Technical Lead",
-                    employer:"Huashan Finance",
+                    employer:"Huasheng Finance",
                     startDate:"2020",
                     endDate:"2024",
                     city:"Hangzhou",
@@ -183,7 +183,7 @@ Calm communicator, strong listener, able to go deep for long stretches. Core sta
             },
             {
                 jobTitle:"技术负责人",
-                employer:"华山财经",
+                employer:"花生财经",
                 startDate:"2020年",
                 endDate:"2024年",
                 city:"杭州",
