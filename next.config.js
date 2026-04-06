@@ -7,6 +7,11 @@ const nextConfig = {
         source: '/',
         destination: '/default/zh',
         permanent: false
+      },
+      {
+        source: '/default',
+        destination: '/default/zh',
+        permanent: false
       }
     ]
   }
