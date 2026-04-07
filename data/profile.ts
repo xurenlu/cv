@@ -53,27 +53,27 @@ Calm communicator, strong listener, able to go deep for long stretches. Core sta
                 },
                 {
                     subject:"marstaff",
-                    desc:"Go-based extensible AI agent platform: multi-provider LLMs, tools & SKILL.md skills, MCP, WebSocket streaming, Telegram/Matrix bots, and AFK background tasks (cron, monitoring, notifications).",
+                    desc:"Go-based extensible AI agent platform: multi-provider LLMs, tools & SKILL.md skills, MCP, WebSocket streaming, Telegram/Matrix bots, and AFK background tasks (cron, monitoring, notifications). Open source on GitHub.",
                     link:"https://github.com/xurenlu/marstaff"
                 },
                 {
                     subject:"houyi",
-                    desc:"WeCom (WeChat Work) session archive backend: Spring Boot 3 + Java 21, pulls and stores chat/media with OSS, MySQL, Redis, and RocketMQ; observability via Prometheus.",
+                    desc:"WeCom (WeChat Work) session archive backend: Spring Boot 3 + Java 21, pulls and stores chat/media with OSS, MySQL, Redis, and RocketMQ; observability via Prometheus. Open source on GitHub.",
                     link:"https://github.com/xurenlu/houyi"
                 },
                 {
                     subject:"sslcat",
-                    desc:"Go reverse proxy / edge server that provisions and renews HTTPS certificates automatically (Let’s Encrypt). Homepage: sslcat.com",
+                    desc:"Go reverse proxy / edge server that provisions and renews HTTPS certificates automatically (Let’s Encrypt). Homepage: sslcat.com. Open source on GitHub.",
                     link:"https://github.com/xurenlu/sslcat"
                 },
                 {
                     subject:"fastv",
-                    desc:"macOS Swift/SwiftUI app “妙打”: local voice-to-text input (SenseVoice + ONNX), optional IMAP mail client, and an HTTP/WebSocket STT API for integrations.",
+                    desc:"macOS Swift/SwiftUI app “妙打”: local voice-to-text input (SenseVoice + ONNX), optional IMAP mail client, and an HTTP/WebSocket STT API for integrations. Open source on GitHub.",
                     link:"https://github.com/xurenlu/fastv"
                 },
                 {
                     subject:"cdnproxy",
-                    desc:"Go proxy for public CDN assets and AI APIs in restricted networks: path-based CDN forwarding, disk cache, streaming, WebSocket/SSE, and admin whitelist.",
+                    desc:"Go proxy for public CDN assets and AI APIs in restricted networks: path-based CDN forwarding, disk cache, streaming, WebSocket/SSE, and admin whitelist. Open source on GitHub.",
                     link:"https://github.com/xurenlu/cdnproxy"
                 }
             ],
@@ -239,27 +239,27 @@ Calm communicator, strong listener, able to go deep for long stretches. Core sta
             },
             {
                 subject:"marstaff",
-                desc:"Go 实现的 AI Agent 平台：多厂商模型、工具与 SKILL 技能、MCP、WebSocket 流式输出、Telegram/Matrix 接入、离场 AFK 定时与监控任务等。",
+                desc:"Go 实现的 AI Agent 平台：多厂商模型、工具与 SKILL 技能、MCP、WebSocket 流式输出、Telegram/Matrix 接入、离场 AFK 定时与监控任务等。（GitHub 开源）",
                 link:"https://github.com/xurenlu/marstaff"
             },
             {
                 subject:"houyi",
-                desc:"企业微信会话存档系统（后羿）：Spring Boot 3 + Java 21，拉取并存储会话与媒体；阿里云 OSS、MySQL、Redis、RocketMQ，配套监控与文档。",
+                desc:"企业微信会话存档系统（后羿）：Spring Boot 3 + Java 21，拉取并存储会话与媒体；阿里云 OSS、MySQL、Redis、RocketMQ，配套监控与文档。（GitHub 开源）",
                 link:"https://github.com/xurenlu/houyi"
             },
             {
                 subject:"sslcat",
-                desc:"支持自动 HTTPS 证书申请与续期的 Go 反向代理 / 边缘网关，站点 sslcat.com。",
+                desc:"支持自动 HTTPS 证书申请与续期的 Go 反向代理 / 边缘网关，站点 sslcat.com。（GitHub 开源）",
                 link:"https://github.com/xurenlu/sslcat"
             },
             {
                 subject:"fastv（妙打）",
-                desc:"macOS 智能语音输入法：本地语音转写（SenseVoice/ONNX）、可选 IMAP 邮箱，并提供 HTTP/WebSocket STT API 供外部集成。",
+                desc:"macOS 智能语音输入法：本地语音转写（SenseVoice/ONNX）、可选 IMAP 邮箱，并提供 HTTP/WebSocket STT API 供外部集成。（GitHub 开源）",
                 link:"https://github.com/xurenlu/fastv"
             },
             {
                 subject:"cdnproxy",
-                desc:"在受限网络中代理公共 CDN 与 AI API 的 Go 服务：路径转发、磁盘缓存、大文件与 Range、WebSocket/SSE 流式、管理白名单等。",
+                desc:"在受限网络中代理公共 CDN 与 AI API 的 Go 服务：路径转发、磁盘缓存、大文件与 Range、WebSocket/SSE 流式、管理白名单等。（GitHub 开源）",
                 link:"https://github.com/xurenlu/cdnproxy"
             }
         ]
