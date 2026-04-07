@@ -11,34 +11,6 @@ type HeaderProps = {
 const Header = ({ locale }: HeaderProps): ReactElement => {
   const t = uiLabels[locale]
 
-  function exportMainAreaAsImage() {
-    const el = document.querySelector('#main-area')
-    if (!el) return
-    const html2canvas = (
-      window as unknown as {
-        html2canvas?: (
-          el: Element,
-          opts: Record<string, unknown>
-        ) => Promise<HTMLCanvasElement>
-      }
-    ).html2canvas
-    if (!html2canvas) return
-    html2canvas(el, {
-      allowTaint: true,
-      useCORS: true,
-      backgroundColor: null,
-      scale: 2,
-    }).then((canvas: HTMLCanvasElement) => {
-      const dataURL = canvas.toDataURL('image/jpeg', 0.92)
-      const a = document.createElement('a')
-      a.href = dataURL
-      a.download = `resume-${new Date().toISOString().slice(0, 10)}.jpg`
-      document.body.appendChild(a)
-      a.click()
-      document.body.removeChild(a)
-    })
-  }
-
   return (
     <>
       <header id="header-wrapper" className={`${styles.header} no-print`}>
@@ -68,13 +40,6 @@ const Header = ({ locale }: HeaderProps): ReactElement => {
               onClick={() => window.print()}
             >
               {t.printOrPdf}
-            </button>
-            <button
-              type="button"
-              className={styles.ghostBtn}
-              onClick={exportMainAreaAsImage}
-            >
-              {t.exportImage}
             </button>
             <ThemeChanger />
           </div>

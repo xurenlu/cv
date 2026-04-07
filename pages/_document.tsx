@@ -7,7 +7,6 @@ export default function Document() {
 
             </Head>
             <body>
-            <script src={"/html2canvas.min.js"} defer/>
             <Main />
             <NextScript/>
             <script charSet="UTF-8" id="LA_COLLECT"

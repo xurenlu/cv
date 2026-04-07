@@ -7,7 +7,6 @@ export const uiLabels = {
     navLangEn: 'English',
     navLangZh: '简体中文',
     printOrPdf: 'Print / PDF',
-    exportImage: 'Export image',
     sections: {
       profile: 'Profile',
       education: 'Education',
@@ -30,7 +29,6 @@ export const uiLabels = {
     navLangEn: 'English',
     navLangZh: '简体中文',
     printOrPdf: '打印 / PDF',
-    exportImage: '导出图片',
     sections: {
       profile: '个人简介',
       education: '教育背景',
