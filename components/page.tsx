@@ -46,6 +46,10 @@ type ProfileBlock = {
   projects: { subject: string; desc: string; link: string }[]
 }
 
+function isGithubRepoUrl(url: string): boolean {
+  return /github\.com\//i.test(url)
+}
+
 export type ResumePageProps = ProfileBlock & {
   locale: Locale
 }
@@ -114,21 +118,36 @@ export default function Page(props: ResumePageProps) {
     </li>
   ))
 
-  const projects = props.projects.map((item) => (
-    <li key={item.subject} className={styles.listItem}>
-      <h3 className={styles.itemTitle}>
-        <a
-          className={styles.itemLink}
-          href={item.link}
-          rel="noreferrer"
-          target="_blank"
-        >
-          {item.subject}
-        </a>
-      </h3>
-      <p className={styles.itemDesc}>{item.desc}</p>
-    </li>
-  ))
+  const projects = props.projects.map((item) => {
+    const showRepoUrl = isGithubRepoUrl(item.link)
+    return (
+      <li key={item.subject} className={styles.listItem}>
+        <h3 className={styles.itemTitle}>
+          <a
+            className={styles.itemLink}
+            href={item.link}
+            rel="noreferrer"
+            target="_blank"
+          >
+            {item.subject}
+          </a>
+        </h3>
+        {showRepoUrl ? (
+          <p className={styles.projectRepoUrl}>
+            <a
+              className={styles.repoUrlLink}
+              href={item.link}
+              rel="noreferrer"
+              target="_blank"
+            >
+              {item.link}
+            </a>
+          </p>
+        ) : null}
+        <p className={styles.itemDesc}>{item.desc}</p>
+      </li>
+    )
+  })
 
   const skillPills = props.skills.map((item) => (
     <span key={item.skill} className={styles.skillPill}>

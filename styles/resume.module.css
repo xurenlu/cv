@@ -330,6 +330,41 @@
   border-bottom-color: var(--resume-accent);
 }
 
+/* GitHub：仓库地址单独一行，便于扫读 */
+.projectRepoUrl {
+  margin: 0 0 0.45rem;
+  font-size: 0.8125rem;
+  line-height: 1.45;
+  word-break: break-all;
+}
+
+.repoUrlLink {
+  font-family:
+    ui-monospace,
+    SFMono-Regular,
+    'SF Mono',
+    Menlo,
+    Monaco,
+    Consolas,
+    monospace;
+  color: var(--resume-muted);
+  font-weight: 500;
+  text-decoration: none;
+  border-bottom: 1px dashed rgba(0, 113, 227, 0.35);
+  transition:
+    color 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.repoUrlLink:hover {
+  color: var(--resume-accent);
+  border-bottom-color: var(--resume-accent);
+}
+
+[data-theme='dark'] .repoUrlLink {
+  border-bottom-color: rgba(10, 132, 255, 0.4);
+}
+
 .skills {
   display: flex;
   flex-wrap: wrap;
@@ -508,7 +543,8 @@
     border-bottom: none;
   }
 
-  .itemLink::after {
+  /* 已在正文展示 GitHub 仓库地址时，避免与 ::after 重复 */
+  .listItem:not(:has(.projectRepoUrl)) .itemLink::after {
     content: attr(href);
     display: block;
     margin-top: 0.2rem;
@@ -517,6 +553,11 @@
     color: var(--resume-muted);
     line-height: 1.35;
     word-break: break-all;
+  }
+
+  .repoUrlLink {
+    border-bottom: none;
+    color: var(--resume-muted) !important;
   }
 
   .skillPill {
