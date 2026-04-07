@@ -50,30 +50,29 @@ export type ResumePageProps = ProfileBlock & {
   locale: Locale
 }
 
-/** Mount-time stagger — avoids whileInView failing (sections stuck at opacity 0). */
+/** 挂载时阶梯入场；即使用户开启「减少动效」也保留短促位移，避免像静态页 */
 function sectionMotion(reduce: boolean | null, order: number) {
-  if (reduce) {
-    return { initial: false as const, animate: { opacity: 1 } }
-  }
+  const soft = reduce === true
   return {
-    initial: { opacity: 0, y: 16 },
+    initial: { opacity: soft ? 0.92 : 0, y: soft ? 8 : 20 },
     animate: { opacity: 1, y: 0 },
     transition: {
-      duration: 0.48,
-      delay: 0.06 + order * 0.07,
-      ease: [0.22, 1, 0.36, 1] as const,
+      duration: soft ? 0.36 : 0.58,
+      delay: soft ? 0.03 + order * 0.05 : 0.1 + order * 0.09,
+      ease: [0.16, 1, 0.3, 1] as const,
     },
   }
 }
 
 function heroMotion(reduce: boolean | null) {
-  if (reduce) {
-    return { initial: false as const, animate: { opacity: 1 } }
-  }
+  const soft = reduce === true
   return {
-    initial: { opacity: 0, y: 12 },
+    initial: { opacity: soft ? 0.92 : 0, y: soft ? 6 : 14 },
     animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.52, ease: [0.22, 1, 0.36, 1] as const },
+    transition: {
+      duration: soft ? 0.4 : 0.65,
+      ease: [0.16, 1, 0.3, 1] as const,
+    },
   }
 }
 

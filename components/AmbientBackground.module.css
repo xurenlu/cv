@@ -6,55 +6,206 @@
   overflow: hidden;
 }
 
+/* 底层：大面积流动色块 */
+.mesh {
+  position: absolute;
+  inset: 0;
+}
+
+.blob1,
+.blob2,
+.blob3 {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(72px);
+  opacity: 0.55;
+  will-change: transform;
+}
+
+.blob1 {
+  width: min(90vw, 720px);
+  height: min(90vw, 720px);
+  top: -18%;
+  left: -12%;
+  background: radial-gradient(
+    circle,
+    rgba(0, 113, 227, 0.45) 0%,
+    rgba(100, 180, 255, 0.12) 45%,
+    transparent 70%
+  );
+  animation: floatA 22s ease-in-out infinite;
+}
+
+.blob2 {
+  width: min(70vw, 560px);
+  height: min(70vw, 560px);
+  bottom: -8%;
+  right: -10%;
+  background: radial-gradient(
+    circle,
+    rgba(140, 80, 220, 0.35) 0%,
+    rgba(200, 120, 255, 0.1) 50%,
+    transparent 68%
+  );
+  animation: floatB 28s ease-in-out infinite;
+}
+
+.blob3 {
+  width: min(55vw, 420px);
+  height: min(55vw, 420px);
+  top: 38%;
+  left: 35%;
+  background: radial-gradient(
+    circle,
+    rgba(0, 200, 180, 0.22) 0%,
+    transparent 65%
+  );
+  animation: floatC 18s ease-in-out infinite;
+}
+
+[data-theme='dark'] .blob1 {
+  background: radial-gradient(
+    circle,
+    rgba(10, 132, 255, 0.42) 0%,
+    rgba(60, 120, 255, 0.12) 48%,
+    transparent 72%
+  );
+}
+
+[data-theme='dark'] .blob2 {
+  background: radial-gradient(
+    circle,
+    rgba(160, 90, 255, 0.38) 0%,
+    rgba(100, 60, 200, 0.1) 52%,
+    transparent 68%
+  );
+}
+
+[data-theme='dark'] .blob3 {
+  background: radial-gradient(
+    circle,
+    rgba(0, 220, 200, 0.18) 0%,
+    transparent 65%
+  );
+}
+
+@keyframes floatA {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(6%, 4%) scale(1.08);
+  }
+}
+
+@keyframes floatB {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(-5%, -6%) scale(1.06);
+  }
+}
+
+@keyframes floatC {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(8%, -5%) scale(1.12);
+  }
+  66% {
+    transform: translate(-4%, 6%) scale(0.95);
+  }
+}
+
+/* 细网格 + 渐隐，增加科技感 */
+.grid {
+  position: absolute;
+  inset: 0;
+  opacity: 0.22;
+  background-image:
+    linear-gradient(rgba(0, 80, 200, 0.09) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 80, 200, 0.09) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(ellipse 85% 70% at 50% 35%, black 15%, transparent 75%);
+  -webkit-mask-image: radial-gradient(
+    ellipse 85% 70% at 50% 35%,
+    black 15%,
+    transparent 75%
+  );
+  animation: gridDrift 48s linear infinite;
+}
+
+[data-theme='dark'] .grid {
+  opacity: 0.28;
+  background-image:
+    linear-gradient(rgba(120, 180, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(120, 180, 255, 0.1) 1px, transparent 1px);
+}
+
+@keyframes gridDrift {
+  0% {
+    background-position: 0 0, 0 0;
+  }
+  100% {
+    background-position: 56px 56px, 56px 56px;
+  }
+}
+
 .canvas {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
-  opacity: 0.78;
+  opacity: 1;
+  mix-blend-mode: screen;
 }
 
 .fogA,
 .fogB {
   position: absolute;
-  inset: -20%;
+  inset: -25%;
   border-radius: 50%;
-  filter: blur(80px);
-  opacity: 0.48;
-  animation: drift 28s ease-in-out infinite;
+  filter: blur(90px);
+  opacity: 0.55;
+  animation: drift 26s ease-in-out infinite;
 }
 
 .fogA {
   background: radial-gradient(
     circle at 30% 40%,
-    rgba(0, 113, 227, 0.14),
-    transparent 55%
+    rgba(0, 113, 227, 0.28),
+    transparent 58%
   );
 }
 
 .fogB {
   background: radial-gradient(
     circle at 70% 60%,
-    rgba(160, 90, 220, 0.1),
-    transparent 50%
+    rgba(160, 90, 220, 0.22),
+    transparent 52%
   );
-  animation-delay: -14s;
-  animation-duration: 36s;
+  animation-delay: -13s;
+  animation-duration: 34s;
 }
 
 [data-theme='dark'] .fogA {
   background: radial-gradient(
     circle at 30% 40%,
-    rgba(10, 132, 255, 0.18),
-    transparent 55%
+    rgba(10, 132, 255, 0.32),
+    transparent 58%
   );
 }
 
 [data-theme='dark'] .fogB {
   background: radial-gradient(
     circle at 70% 60%,
-    rgba(120, 80, 200, 0.12),
-    transparent 50%
+    rgba(120, 80, 200, 0.24),
+    transparent 52%
   );
 }
 
@@ -64,14 +215,27 @@
     transform: translate(0, 0) scale(1);
   }
   50% {
-    transform: translate(3%, -2%) scale(1.05);
+    transform: translate(4%, -3%) scale(1.06);
   }
 }
 
+/* 减少动效时保留色块与网格，只放慢或减弱位移 */
 @media (prefers-reduced-motion: reduce) {
+  .blob1,
+  .blob2,
+  .blob3 {
+    animation-duration: 0.01ms;
+    animation-iteration-count: 1;
+  }
+
+  .grid {
+    animation: none;
+    opacity: 0.14;
+  }
+
   .fogA,
   .fogB {
     animation: none;
-    opacity: 0.42;
+    opacity: 0.48;
   }
 }
