@@ -372,10 +372,21 @@
 .contactBlock a {
   color: var(--resume-accent);
   text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  max-width: 100%;
 }
 
 .contactBlock a:hover {
   text-decoration: underline;
+}
+
+/* 避免窄侧栏内图标与文字折成两行 */
+.contactRow a svg {
+  flex-shrink: 0;
 }
 
 .contactRow {
