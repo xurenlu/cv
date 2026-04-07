@@ -120,7 +120,7 @@ Calm communicator, strong listener, able to go deep for long stretches. Core sta
                     startDate:"Apr,2013",
                     endDate:"June,2016",
                     city:"Hangzhou",
-                    description:`PM for the Taobao main search PHP squad (~10 people): release planning and delivery for s.tao.com–related changes; partnered with the algorithm team on engineering-side bucket testing and experiments.`
+                    description:`PM for the Taobao main search PHP squad (~10 people): release planning and delivery for s.taobao.com–related changes; partnered with the algorithm team on engineering-side bucket testing and experiments.`
 
                 },
                 {
@@ -196,7 +196,7 @@ Calm communicator, strong listener, able to go deep for long stretches. Core sta
                 startDate:"Apr,2013",
                 endDate:"June,2016",
                 city:"杭州",
-                description:`任淘宝主搜索方向 PHP 小组 PM，团队约 10 人：负责 s.tao.com 相关日常上线排期与交付；协同算法团队落地工程侧 bucket test 与实验。`
+                description:`任淘宝主搜索方向 PHP 小组 PM，团队约 10 人：负责 s.taobao.com 相关日常上线排期与交付；协同算法团队落地工程侧 bucket test 与实验。`
 
             },
             {
