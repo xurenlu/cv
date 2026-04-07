@@ -87,6 +87,7 @@ Calm communicator, strong listener, able to go deep for long stretches. Core sta
                     description:""
                 }
             ],
+            /* 工作经历：越新越靠前 */
             employmentHistory:[
                 {
                     jobTitle:"Partner",
@@ -105,12 +106,13 @@ Calm communicator, strong listener, able to go deep for long stretches. Core sta
                     description:`Technical lead for a team of ~70. Led compliance and risk-control platforms. Evolved from early MongoDB-centric personal WeChat compliance to enterprise WeChat–wide coverage; Elasticsearch plus a rules engine; triggers expanded from brittle keyword-only flows to QR codes, external links, payment codes, and ML-based detection. Media ingestion and security audit at roughly 30 million chat messages per day. Integrated AI into compliance and monitoring in recent years.`
                 },
                 {
-                    jobTitle:"R&D",
-                    employer:"Yahoo! China",
-                    startDate:"Aug,2007",
-                    endDate:"Jul,2011",
+                    jobTitle:"CTO",
+                    employer:"some-site.cn",
+                    startDate:"July,2016",
+                    endDate:"Dec,2017",
                     city:"Beijing",
-                    description:"Responsible for the backend development of ks.cn.yahoo.com and yahoo music in the category of "
+                    description:`glz.cn is a website that provides home renovation services. I was mainly responsible for the recruitment and performance evaluation of the technical R&D team in the early stage. In the later stage, I also lead the content operation and advertising team.
+            `
                 },
                 {
                     jobTitle:"R&D expert",
@@ -122,13 +124,12 @@ Calm communicator, strong listener, able to go deep for long stretches. Core sta
 
                 },
                 {
-                    jobTitle:"CTO",
-                    employer:"some-site.cn",
-                    startDate:"July,2016",
-                    endDate:"Dec,2017",
+                    jobTitle:"R&D",
+                    employer:"Yahoo! China",
+                    startDate:"Aug,2007",
+                    endDate:"Jul,2011",
                     city:"Beijing",
-                    description:`glz.cn is a website that provides home renovation services. I was mainly responsible for the recruitment and performance evaluation of the technical R&D team in the early stage. In the later stage, I also lead the content operation and advertising team.
-            `
+                    description:"Responsible for the backend development of ks.cn.yahoo.com and yahoo music in the category of "
                 },
             ]
         },
@@ -171,6 +172,7 @@ Calm communicator, strong listener, able to go deep for long stretches. Core sta
                 description:"在校期间，同时获得了材料科学、计算机科学两个专业的学位。"
             }
         ],
+        /* 工作经历：越新越靠前 */
         employmentHistory:[
             {
                 jobTitle:"合伙人",
@@ -189,12 +191,13 @@ Calm communicator, strong listener, able to go deep for long stretches. Core sta
                 description:`任技术负责人，团队约 70 人。主导合规与风控相关系统。从早期 MongoDB 为主的个人微信合规，演进为全面企业微信场景；检索与审计结合 Elasticsearch、规则引擎，触发方式从关键词扩展到二维码、外链、收款码及机器学习触发等。支撑媒体消息等高吞吐场景，日均约 3000 万条聊天消息入库与安全审计。近年将 AI 能力持续融入合规与业务风控。`
             },
             {
-                jobTitle:"PHP工程师",
-                employer:"雅虎中国",
-                startDate:"Aug,2007",
-                endDate:"Jul,2011",
-                city:"北京",
-                description:"前期主要负责雅虎知识堂的服务端开发"
+                jobTitle:"研发专家",
+                employer:"Alibaba Group",
+                startDate:"Apr,2013",
+                endDate:"June,2016",
+                city:"杭州",
+                description:`任淘宝主搜索方向 PHP 小组 PM，团队约 10 人：负责 s.tao.com 相关日常上线排期与交付；协同算法团队落地工程侧 bucket test 与实验。`
+
             },
             {
                 jobTitle:"创始人",
@@ -205,13 +208,12 @@ Calm communicator, strong listener, able to go deep for long stretches. Core sta
                 description:`离开雅虎织织了一个小的团队来为淘宝平台提供订单同步类工具。。。`
             },
             {
-                jobTitle:"研发专家",
-                employer:"Alibaba Group",
-                startDate:"Apr,2013",
-                endDate:"June,2016",
-                city:"杭州",
-                description:`任淘宝主搜索方向 PHP 小组 PM，团队约 10 人：负责 s.tao.com 相关日常上线排期与交付；协同算法团队落地工程侧 bucket test 与实验。`
-
+                jobTitle:"PHP工程师",
+                employer:"雅虎中国",
+                startDate:"Aug,2007",
+                endDate:"Jul,2011",
+                city:"北京",
+                description:"前期主要负责雅虎知识堂的服务端开发"
             }
         ],
         projects:[
