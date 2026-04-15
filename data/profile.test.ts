@@ -7,11 +7,16 @@ describe('profile data', () => {
     expect(profile.zh.employmentHistory[0].employer).toContain('若然')
   })
 
-  it('includes Huasheng Finance / 花生财经 with overlapping timeline fields', () => {
-    const zhHs = profile.zh.employmentHistory.find((e) => e.employer === '花生财经')
-    const enHs = profile.en.employmentHistory.find((e) => e.employer === 'Huasheng Finance')
-    expect(zhHs?.startDate).toContain('2020')
-    expect(enHs?.startDate).toContain('2020')
+  it('merges Huasheng / Liduoxing into Shanghai Liduoxing Securities Consulting', () => {
+    const zh = profile.zh.employmentHistory.find((e) =>
+      e.employer.includes('利多星证券咨询'),
+    )
+    const en = profile.en.employmentHistory.find((e) =>
+      e.employer.includes('Liduoxing Securities'),
+    )
+    expect(zh?.startDate).toContain('2020年11月')
+    expect(en?.startDate).toContain('Nov,2020')
+    expect(profile.zh.employmentHistory.some((e) => e.employer === '美牛网')).toBe(true)
   })
 
   it('uses display name 徐仁禄 / Xu Renlu', () => {
