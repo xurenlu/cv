@@ -3,7 +3,7 @@ const profile = {
         {
             profile:{
                 wantedJobTitle:"AI Consultant · Agent & AI Architecture",
-                firstName:"renlu",
+                firstName:"Xu Renlu",
                 lastName:"",
                 email:"xurenlu@gmail.com",
                 phone:"18006787690",
@@ -136,7 +136,7 @@ Calm communicator, strong listener, able to go deep for long stretches. Core sta
     zh:{
         profile:{
             wantedJobTitle:"AI 咨询顾问 · Agent / AI 架构",
-            firstName:"黄小滚",
+            firstName:"徐仁禄",
             lastName:"",
             email:"xurenlu@gmail.com",
             phone:"18006787690",

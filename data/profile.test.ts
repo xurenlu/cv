@@ -12,6 +12,11 @@ describe('profile data', () => {
     expect(profile.en.employmentHistory[1].employer).toBe('Huasheng Finance')
   })
 
+  it('uses display name 徐仁禄 / Xu Renlu', () => {
+    expect(profile.zh.profile.firstName).toBe('徐仁禄')
+    expect(profile.en.profile.firstName).toBe('Xu Renlu')
+  })
+
   it('keeps zh/en employment lists non-empty', () => {
     expect(profile.zh.employmentHistory.length).toBeGreaterThan(0)
     expect(profile.en.employmentHistory.length).toBeGreaterThan(0)
