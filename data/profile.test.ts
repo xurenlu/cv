@@ -7,9 +7,11 @@ describe('profile data', () => {
     expect(profile.zh.employmentHistory[0].employer).toContain('若然')
   })
 
-  it('uses 花生财经 / Huasheng for the 2020–2024 role', () => {
-    expect(profile.zh.employmentHistory[1].employer).toBe('花生财经')
-    expect(profile.en.employmentHistory[1].employer).toBe('Huasheng Finance')
+  it('includes Huasheng Finance / 花生财经 with overlapping timeline fields', () => {
+    const zhHs = profile.zh.employmentHistory.find((e) => e.employer === '花生财经')
+    const enHs = profile.en.employmentHistory.find((e) => e.employer === 'Huasheng Finance')
+    expect(zhHs?.startDate).toContain('2020')
+    expect(enHs?.startDate).toContain('2020')
   })
 
   it('uses display name 徐仁禄 / Xu Renlu', () => {
